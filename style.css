@@ -1,0 +1,167 @@
+/* General Body Styles */
+body {
+    background: rgb(56, 45, 28);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Text Animation */
+#monn {
+    color: white;
+    overflow: hidden;
+    animation: texta 2s steps(25, end);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Keyframes for Text Animation */
+@keyframes texta {
+    from {
+        width: 0;
+    }
+    to {
+        width: 290px; /* Adjust or set to 100% for responsiveness */
+    }
+}
+
+/* Other Animations */
+#monnf, #monnff {
+    display: inline-block;
+    color: white;
+    animation: palpal 3s ease;
+}
+
+@keyframes palpal {
+    0% {
+        transform: translateX(0px);
+    }
+    30% {
+        transform: translateX(200px);
+    }
+    70% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes pakpak {
+    0% {
+        transform: translateX(0px);
+    }
+    30% {
+        transform: translateX(-400px);
+    }
+    70% {
+        transform: translateY(-100px);
+    }
+}
+
+/* Heart Animation */
+#heart {
+    animation: tibok 1s infinite;
+    font-size: 40px; /* Consider using vw for responsiveness */
+}
+
+@keyframes tibok {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Rose Animation */
+#rose {
+    border-radius: 30px;
+    box-shadow: 1px 5px 5px 5px black;
+    border: 2px solid black;
+    display: none;
+    animation: roro 3s ease;
+}
+
+@keyframes roro {
+    0% {
+        transform: translateY(-400px);
+    }
+}
+
+/* Paragraph Style */
+p {
+    display: inline-block;
+}
+
+/* Buttons and Background */
+#clek {
+    color: white;
+    border-radius: 10px;
+    padding: 10px 5px;
+    border: 2px solid white;
+    background: rgb(56, 45, 28);
+}
+
+button {
+    font-size: 20px; /* Use rem or vw for responsiveness */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Positions for Responsive Design */
+#bak, #nex {
+    color: white;
+    background: rgb(56, 45, 28);
+    position: absolute;
+    display: none;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    #monn {
+        width: 100%; /* Allow full width on smaller devices */
+    }
+
+    #heart {
+        font-size: 30px; /* Make heart size smaller for mobile */
+    }
+
+    button {
+        font-size: 16px; /* Reduce button size on mobile */
+    }
+
+    #bak {
+        left: 20px; /* Adjust position for mobile */
+        top: 20px;
+    }
+
+    #nex {
+        left: 220px; /* Adjust position for mobile */
+        top: 20px;
+    }
+
+    /* Responsive adjustments for other elements if necessary */
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px; /* Further reduce button size for small screens */
+    }
+
+    #nex{
+        margin-top: 240px;
+        margin-left: 110px;
+        font-size: 20px;
+    }
+    #bak{
+        margin-top: 240px;
+        font-size: 20px;
+    }
+
+    #heart {
+        font-size: 25px; /* Further scale down icon size */
+    }
+}
